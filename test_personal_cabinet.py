@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
+
 def test_enter_button(driver, website_url):
     driver.get(website_url)
 

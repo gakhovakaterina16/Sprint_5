@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 def test_successful_registration(driver, website_url):
     driver.get(website_url)
 
