@@ -1,9 +1,10 @@
 from locators import PersonalCabinetLocators
 
+URL = "https://stellarburgers.nomoreparties.site/"
 
 class TestPersonalCabinetFunctionality:
-    def test_enter_button(self, driver, website_data):
-        driver.get(website_data["url"])
+    def test_enter_button(self, driver):
+        driver.get(URL)
 
         button_enter = driver.find_element(*PersonalCabinetLocators.ENTER_BUTTON)
         button_enter.click()
@@ -11,7 +12,7 @@ class TestPersonalCabinetFunctionality:
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
     def test_personal_cabinet_button(self, driver, website_data):
-        driver.get(website_data["url"])
+        driver.get(URL)
 
         button_personal_cabinet = driver.find_element(*PersonalCabinetLocators.PERSONAL_CABINET_BUTTON)
         button_personal_cabinet.click()
@@ -19,7 +20,7 @@ class TestPersonalCabinetFunctionality:
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
     def test_authorization(self, driver, website_data):
-        driver.get(website_data["url"])
+        driver.get(URL])
 
         button_enter = driver.find_element(*PersonalCabinetLocators.ENTER_BUTTON)
         button_enter.click()

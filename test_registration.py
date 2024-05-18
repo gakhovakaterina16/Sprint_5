@@ -3,11 +3,12 @@ from faker import Faker
 
 
 fake = Faker()
+URL = "https://stellarburgers.nomoreparties.site/"
 
 
 class TestRegistration:
     def test_successful_registration(self, driver, website_data):
-        driver.get(website_data["url"])
+        driver.get(URL])
 
         button_personal_cabinet = driver.find_element(*RegistrationLocators.BUTTON_PERSONAL_CABINET)
         button_personal_cabinet.click()
@@ -28,7 +29,7 @@ class TestRegistration:
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
     def test_registration_incorrect_password(self, driver, website_data):
-        driver.get(website_data["url"])
+        driver.get(URL)
 
         button_personal_cabinet = driver.find_element(*RegistrationLocators.BUTTON_PERSONAL_CABINET)
         button_personal_cabinet.click()

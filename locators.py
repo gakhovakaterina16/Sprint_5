@@ -20,7 +20,6 @@ class RegistrationLocators:
 
 
 class TabsConstructorLocators:
-    BUNS_TAB = (By.XPATH, "//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text()='Булки']")
-    SAUCES_TAB = (By.XPATH, "/div[@class='tab_tab__1SPyG pt-4 pr-10 pb-4 pl-10 noselect']/div[2]/span[text()='Соусы']")
-    FILLINGS_TAB = (By.XPATH, "//div[@class='tab_tab__1SPyG pt-4 pr-10 pb-4 pl-10 noselect']/div[3]/span[text()='Начинки']")
-    POSITION_1_TITLE = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[2]/h2[1]")
+    BUNS_TAB = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG')]/span[contains(text(), 'Булки')]")
+    SAUCES_TAB = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG')]/span[contains(text(), 'Соусы')]")
+    FILLINGS_TAB = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG')]/span[contains(text(), 'Начинки')]")
